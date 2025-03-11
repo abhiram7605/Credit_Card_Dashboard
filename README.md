@@ -1,80 +1,93 @@
 # **Credit Card Transaction & Customer Analysis Dashboard**
 
-## **Project Overview**
-This project focuses on developing a **comprehensive Power BI dashboard** for analyzing **credit card transactions** and **customer behavior** using real-time data stored in a **PostgreSQL database**. The dashboard provides insights into key financial metrics, transaction trends, and customer demographics, enabling stakeholders to make informed decisions.
+## **Objective**
+The objective of this project is to develop a **credit card analytics dashboard** that provides **real-time insights** into transaction trends, customer spending behavior, and key financial metrics. By integrating **PostgreSQL** with **Power BI**, this dashboard enables stakeholders to monitor and optimize credit card operations efficiently.
 
 ---
 
-## **Table of Contents**
-- [Project Workflow](#project-workflow)
-- [Dataset Information](#dataset-information)
-- [Dashboard Overview](#dashboard-overview)
-- [Technologies Used](#technologies-used)
-- [Setup and Installation](#setup-and-installation)
-- [Power BI Dashboard](#power-bi-dashboard)
-- [Insights and Key Findings](#insights-and-key-findings)
-- [Contributors](#contributors)
-- [License](#license)
+## **Workflow**
+1. **Data Collection**
+   - Two CSV files are used:
+     - `cc_data.csv` (Credit Card Transactions)
+     - `customer_data.csv` (Customer Demographics)
 
----
-
-## **Project Workflow**
-1. **Data Source**  
-   - Two CSV files are used as input:
-     - **Credit Card Transactions (`cc_data.csv`)**
-     - **Customer Data (`customer_data.csv`)**
-  
-2. **Data Storage**  
-   - The CSV data is imported into **PostgreSQL**.
-   - Two separate tables are created in **PostgreSQL**:
+2. **Data Storage**
+   - The data is uploaded into **PostgreSQL** as two tables:
      - `credit_card_transactions`
      - `customer_details`
 
-3. **Data Connection to Power BI**  
-   - PostgreSQL is connected to **Power BI** for visualization.
-   - Data transformation and modeling are done in Power BI.
-
-4. **Dashboard Development**  
-   - Two dashboards are created:
-     - **Credit Card Customer Report**
-     - **Credit Card Transaction Report**
-   - KPIs and insights are displayed visually.
+3. **Data Processing & Visualization**
+   - Power BI is connected to PostgreSQL.
+   - Data is transformed and structured for visualization.
+   - Dashboards are created for in-depth analysis.
 
 ---
 
-## **Dataset Information**
-- **`cc_data.csv` (Transaction Data)**
-  - Contains transaction details such as revenue, transaction amount, card type, expenditure type, and more.
-  
-- **`customer_data.csv` (Customer Data)**
-  - Includes demographic details such as income level, job type, marital status, and transaction behavior.
+## **Datasets**
+### **1. Credit Card Transaction Data (`cc_data.csv`)**
+- **Columns:**
+  - `transaction_id`: Unique transaction identifier  
+  - `transaction_date`: Date of transaction  
+  - `card_category`: Credit card type (Gold, Silver, Blue, Platinum)  
+  - `transaction_amount`: Value of transaction  
+  - `revenue`: Revenue generated  
+  - `interest_earned`: Interest collected  
+
+### **2. Customer Data (`customer_data.csv`)**
+- **Columns:**
+  - `customer_id`: Unique customer identifier  
+  - `age_group`: Age category (20-30, 30-40, etc.)  
+  - `income_level`: Low, Medium, High  
+  - `job_type`: Business, White-Collar, Government, etc.  
+  - `marital_status`: Single, Married, Unknown  
+  - `spending_habit`: Preferred spending category (Bills, Travel, Food, etc.)  
 
 ---
 
-## **Dashboard Overview**
-### **1. Credit Card Customer Report**  
-Provides insights into customer revenue contribution, income level, education level, and spending behavior.
+## **Visualizations**
+### **1. Credit Card Customer Report**
+This dashboard focuses on **customer behavior, revenue distribution, and spending habits**.
 
 ![Customer Report](Customer_report.jpeg)
 
-### **2. Credit Card Transaction Report**  
-Focuses on transaction distribution by card type, expenditure type, and quarterly trends.
+### **2. Credit Card Transaction Report**
+This dashboard highlights **transaction trends, revenue by expenditure type, and credit card performance**.
 
 ![Transaction Report](Transaction_Report.jpeg)
 
 ---
 
-## **Technologies Used**
-- **Database**: PostgreSQL  
-- **Data Processing**: Pandas (Python)  
-- **Visualization**: Power BI  
-- **Data Storage**: CSV  
-- **Version Control**: Git & GitHub  
+## **Insights**
+### **Week-over-Week (WoW) Change**
+- **Revenue increased** by **28.8%**.
+
+### **Year-to-Date (YTD) Overview**
+- **Total Revenue:** **$57M**  
+- **Total Interest Earned:** **$8M**  
+- **Total Transaction Amount:** **$46M**  
+- **Male vs. Female Revenue Contribution:**  
+  - **Male:** **$31M**  
+  - **Female:** **$26M**  
+- **Credit Card Performance:**  
+  - **Blue & Silver cards** contribute **93% of overall transactions**.
+- **Top Geographic Regions:**  
+  - **TX, NY & CA** contribute **68% of total revenue**.
+- **Activation Rate:** **57.5%**  
+- **Delinquency Rate:** **6.06%**
+
+### **Top Findings**
+1. **Businessmen and White-Collar customers** contribute the highest revenue.  
+2. **Spending Trends:** Bills, Entertainment, and Fuel are the top expenditure categories.  
+3. **Best Performing Credit Card:** **Blue Card** contributes **$47M revenue**.
 
 ---
 
-## **Setup and Installation**
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/your-github-username/your-repo-name.git
-cd your-repo-name
+## **Technologies Used**
+- **Database:** PostgreSQL  
+- **Data Processing:** Pandas (Python)  
+- **Visualization:** Power BI  
+- **Data Storage:** CSV  
+- **Version Control:** Git & GitHub  
+
+---
+
